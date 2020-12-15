@@ -43,11 +43,10 @@ const Sidebar = () => {
             </div>
             <div className="sidebar__search">
                 <div className="sidebar__search-container">
-                    <input placeholder='Search or start new chat' type='text' onInput={searchInput}/>
+                    <input placeholder='Search ' type='text' onInput={searchInput}/>
                 </div>
             </div>
             <div className="sidebar__chats">
-                <h2 className="sidebar__chats-title">Chats</h2>
                 <div className="sidebar__chats-wrap">
                     <Сonversation title='author' addNewChat/>
                     {term.length === 0 ? rooms.map(room => (

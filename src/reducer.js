@@ -1,7 +1,8 @@
+
+
 export const initialState = {
     user: null,
 };
-
 export const actionTypes = {
     SET_USER: "SET_USER",
 };
@@ -9,6 +10,7 @@ export const actionTypes = {
 const reducer = (state, action) => {
     switch (action.type) {
         case actionTypes.SET_USER:
+            localStorage.setItem('user', JSON.stringify(action.user))
             return {
                 ...state,
                 user: action.user,

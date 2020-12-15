@@ -1,6 +1,7 @@
 .chat {
-    width: 65%;
+    width: 75%;
     position: relative;
+
 }
 
 .chat__header {
@@ -8,29 +9,45 @@
     max-height: 50px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #a7a5a5;
-    padding: 5px;
-    background-color: #eae4e4;
+    padding: 15px 40px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03), 0 7px 9px rgba(0, 0, 0, 0.03);
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(46, 48, 51, 0.98);
 }
 
+.chat__header .MuiAvatar-circle{
+    max-height: 30px;
+    max-width: 30px;
+}
 .chat__header-title {
-    font-weight: 500;
-    margin-left: 15px;
-    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0 15px;
+}
+
+.chat__header-time{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    line-height: 24px;
 }
 
 .chat__body {
     padding: 30px;
     height: 70%;
     overflow-y: scroll;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.01);
+    border-radius: 10px 10px 0 0;
+
 }
 
 .chat__mssg {
     display: flex;
     position: relative;
-    font-size: 16px;
     margin-top: 15px;
-    color: #efeeee;
 }
 
 .chat__mssg-receiver {
@@ -41,23 +58,32 @@
 
 .chat__mssg-body {
     margin-left: 15px;
+    color: #ffffff;
+    font-size: 15px;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 20px;
 }
 
 .chat__mssg-text {
     width: fit-content;
     padding: 10px;
-    border-radius: 10px;
-    background-color: dimgrey;
+    border-radius: 16px 16px 16px 2px;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .chat__mssg-receiver .chat__mssg-text {
-    background-color: #dddddd;
+    border-radius: 16px 16px 2px;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .chat__mssg-time {
+    color: rgba(255, 255, 255, .5);;
     margin-top: 5px;
-    color: black;
     font-size: xx-small;
+    letter-spacing: normal;
+    line-height: 12px;
+    text-transform: uppercase;
 }
 
 .chat__footer {
@@ -74,25 +100,32 @@
 }
 
 .sbm__form-input {
-    /*position: absolute;*/
     border: none;
     outline: none;
     flex: 1;
-    padding: .7rem 2rem .7rem 1rem;
+    padding: 0.7rem 2rem 0.7rem 1rem;
     margin-right: 1rem;
-    border-radius: 1.125rem;
     flex-grow: 2;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1), 0rem 1rem 1rem -1rem rgba(0, 0, 0, 0.2);
-    font-weight: 400;
-    letter-spacing: 0.025em;
-    color: #949292;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
 }
 
 .sbm__form-btn {
     display: flex;
     align-items: center;
     border: none;
-    background: transparent;
     outline: none;
-    transform: translateX(-50px);
+    cursor: pointer;
+    transform: translateX(-53px);
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.09), 0 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 25px;
+    background-color: #006cff;
+}
+
+.sbm__form-btn svg {
+    fill: #ffffff;
+    margin: 0 auto;
 }

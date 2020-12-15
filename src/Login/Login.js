@@ -7,7 +7,16 @@ import {actionTypes} from "../reducer";
 
 const Login = (params) => {
     const [{user}, dispatch] = useStateValue()
+    //Якщо дані входу вже є, вони передаються в dispatch
+    if (localStorage.getItem('user')) {
+        dispatch({
+                type: actionTypes.SET_USER,
+                user: JSON.parse(localStorage.getItem('user'))
+            }
+        )
 
+    }
+    //якщо даних немає, відбувається вхід черех попап гугл
     const signIn = () => {
         auth.signInWithPopup(provider)
             .then(result => {
@@ -28,7 +37,7 @@ const Login = (params) => {
                     <h1> Sign in to Rabbit Chat</h1>
                 </div>
 
-                <Button type='submit' onClick={signIn}>
+                <Button type='submit' onClick={signIn} >
                     Sing In With Google
                 </Button>
             </div>

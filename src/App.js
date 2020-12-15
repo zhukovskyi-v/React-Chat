@@ -4,12 +4,11 @@ import Chat from "./Chat/Chat";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Login from "./Login/Login";
 import {useStateValue} from "./StateProvider";
-import {auth} from "./firebase";
+
 
 function App() {
     const [{user}, dispatch] = useStateValue();
-
-
+    console.log(user?.userId)
     return (
         <div className="app">
             {!user ? (
